@@ -16,7 +16,7 @@
 </div>
 </template>
 
-<style>
+<style scoped>
 .wrap{
   width: 1000px;
   margin: auto;

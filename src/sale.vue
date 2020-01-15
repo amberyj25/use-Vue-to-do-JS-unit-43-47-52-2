@@ -11,10 +11,47 @@
   <div class="clearfix"></div>
   <div class="content">
     <div class="content-inner">
+    <h2>六角西餐廳-壽星折扣</h2>
+    <p>服務生 : HELLO,請問您的生日月份,幫您確認有無壽星的優惠
+    <p>顧客 : <input type="text" v-model="a">月 ;  服務生 : {{checka}} </p>
+    <p>服務生 : 請問預約的人數是不是還沒到齊?看預約名單是2個人</p>
+    <p>顧客 : 現在來到現場人數<input type="text" v-model="number"> 人 ; 服務生 :{{checkb}} </p>
     </div>
   </div>
 </div>
 </template>
+<script>
+export default {
+  data(){
+    return{
+            a:"",
+            number:"",
+    }
+  },
+  computed:{
+    checka(){
+      if(this.a == 2 ){
+        return "有優惠喔！";
+      }else if(this.a == ""){
+        return 
+      }else{
+        return "沒有優惠喔！"
+      }
+    },
+    checkb(){
+      if(this.number == 2){
+        return "好的,將為您帶位"
+      }else if(this.number == ""){
+        return
+      }else if(this.number > 2){  
+        return "因為人數變多,麻煩您稍等一下,幫您確認一下有無位置"
+      }else{
+        return "麻煩您稍等一下,等您人到齊將為您帶位"
+      }
+    }
+  }
+}
+</script>
 <style>
 .wrap{
   width: 1000px;
@@ -50,5 +87,20 @@
     position: absolute;
     left: 100px;
     top:70px;
+}
+h2,p{
+    color: yellow;
+    opacity: 1;
+}
+h2{
+    font-size: 30px;
+    margin-left:180px;
+}
+p{
+    font-size: 20px;
+}
+input[type="text"]{
+  width:50px;
+  height:20px;
 }
 </style>

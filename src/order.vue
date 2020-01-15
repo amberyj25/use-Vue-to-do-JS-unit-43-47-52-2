@@ -70,7 +70,7 @@ export default {
     },
 }
 </script>
-<style>
+<style scoped>
 .wrap{
   width: 1000px;
   margin: auto;
@@ -110,20 +110,18 @@ input[type="text"]{
     top:70px;
 }
 .content-innerbox{
-    padding:15px;
-    padding-left: 120px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 h2,p{
     color: yellow;
     opacity: 1;
-    
 }
 h2{
     font-size: 30px;
     margin-left:180px;
 }
 p{
-    margin-left: 20px;
     font-size: 20px;
 }
 </style>
