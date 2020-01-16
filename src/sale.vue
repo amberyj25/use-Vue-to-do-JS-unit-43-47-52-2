@@ -11,16 +11,18 @@
   <div class="clearfix"></div>
   <div class="content">
     <div class="content-inner">
+     <div class="content-innerbox">
     <h2>六角西餐廳-壽星折扣</h2>
     <p>服務生 : HELLO,請問您的生日月份,幫您確認有無壽星的優惠
     <p>顧客 : <input type="text" v-model="a">月 ;  服務生 : {{checka}} </p>
     <p>服務生 : 請問預約的人數是不是還沒到齊?看預約名單是2個人</p>
     <p>顧客 : 現在來到現場人數<input type="text" v-model="number"> 人 ; 服務生 :{{checkb}} </p>
     </div>
+    </div>
   </div>
 </div>
 </template>
-<script>
+<script scoped>
 export default {
   data(){
     return{
@@ -52,7 +54,7 @@ export default {
   }
 }
 </script>
-<style>
+<style scoped>
 .wrap{
   width: 1000px;
   margin: auto;
@@ -87,6 +89,10 @@ export default {
     position: absolute;
     left: 100px;
     top:70px;
+}
+.content-innerbox{
+    padding-left: 50px;
+    padding-right: 50px;
 }
 h2,p{
     color: yellow;
